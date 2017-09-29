@@ -11,16 +11,18 @@ around execute => sub {
     my $orig = shift;
     my $self = shift;
     my ($controller, $c) = @_;
-
+    
     my $view = $self->attributes->{View}->[0];
     unless ($view) {
         $view = $c->config->{default_view};
     }
     my $renderer = sprintf "View::%s", $view;
     $c->log->debug($renderer);
+
+    my $response = $self->$orig(@_);
     $c->forward($renderer);
 
-    return $self->$orig(@_);
+    return $response;
 };
 
 1;

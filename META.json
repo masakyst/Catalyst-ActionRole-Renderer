@@ -1,5 +1,5 @@
 {
-   "abstract" : "Blah blah blah",
+   "abstract" : "Rendering view for Catalyst action",
    "author" : [
       "Masaaki Saito <masakyst.public@gmail.com>"
    ],
@@ -47,7 +47,21 @@
       }
    },
    "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/masakyst/Catalyst-ActionRole-Renderer/issues"
+      },
+      "homepage" : "https://github.com/masakyst/Catalyst-ActionRole-Renderer",
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/masakyst/Catalyst-ActionRole-Renderer.git",
+         "web" : "https://github.com/masakyst/Catalyst-ActionRole-Renderer"
+      }
+   },
    "version" : "0.01",
+   "x_contributors" : [
+      "Masaaki Saito <masakyst.mobile@gmail.com>"
+   ],
    "x_serialization_backend" : "Cpanel::JSON::XS version 3.0225"
 }
 

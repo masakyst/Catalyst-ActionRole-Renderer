@@ -1,14 +1,27 @@
 # NAME
 
-Catalyst::ActionRole::Renderer - Blah blah blah
+Catalyst::ActionRole::Renderer - Rendering view for Catalyst action
 
 # SYNOPSIS
 
-    use Catalyst::ActionRole::Renderer;
+    package MyApp::Controller::Root;
+    use Moose;
+    use namespace::autoclean;
+
+    BEGIN { extends 'Catalyst::Controller'; }
+
+    sub lookup :GET Args(1) :Does(Renderer) :View(TT) {
+        my ( $self, $c ) = @_;
+    }
 
 # DESCRIPTION
 
-Catalyst::ActionRole::Renderer is
+Catalyst::ActionRole::Renderer is Rendering view for Catalyst action
+
+# SEE ALSO
+
+- [Catalyst::View](https://metacpan.org/pod/Catalyst::View)
+- [Catalyst::ActionRole](https://metacpan.org/pod/Catalyst::ActionRole)
 
 # AUTHOR
 

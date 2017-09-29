@@ -1,5 +1,5 @@
 {
-   "abstract" : "Rendering view for Catalyst action",
+   "abstract" : "Rendering views for Catalyst action",
    "author" : [
       "Masaaki Saito <masakyst.public@gmail.com>"
    ],

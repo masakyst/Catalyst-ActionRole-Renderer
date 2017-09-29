@@ -1,6 +1,6 @@
 # NAME
 
-Catalyst::ActionRole::Renderer - Rendering view for Catalyst action
+Catalyst::ActionRole::Renderer - Rendering views for Catalyst action
 
 # SYNOPSIS
 
@@ -16,7 +16,7 @@ Catalyst::ActionRole::Renderer - Rendering view for Catalyst action
 
 # DESCRIPTION
 
-Catalyst::ActionRole::Renderer is Rendering view for Catalyst action
+Catalyst::ActionRole::Renderer is rendering views for Catalyst action
 
 # SEE ALSO
 

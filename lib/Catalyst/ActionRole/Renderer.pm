@@ -33,7 +33,7 @@ __END__
 
 =head1 NAME
 
-Catalyst::ActionRole::Renderer - Rendering view for Catalyst action
+Catalyst::ActionRole::Renderer - Rendering views for Catalyst action
 
 =head1 SYNOPSIS
 
@@ -50,7 +50,7 @@ Catalyst::ActionRole::Renderer - Rendering view for Catalyst action
 
 =head1 DESCRIPTION
 
-Catalyst::ActionRole::Renderer is Rendering view for Catalyst action
+Catalyst::ActionRole::Renderer is rendering views for Catalyst action
 
 
 =head1 SEE ALSO

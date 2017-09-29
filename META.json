@@ -37,7 +37,10 @@
       },
       "runtime" : {
          "requires" : {
-            "perl" : "5.008005"
+            "Catalyst::Controller::ActionRole" : "0",
+            "Catalyst::Runtime" : "0",
+            "Catalyst::View::TT" : "0",
+            "namespace::autoclean" : "0"
          }
       },
       "test" : {

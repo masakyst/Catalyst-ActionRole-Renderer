@@ -10,18 +10,24 @@ Catalyst::ActionRole::Renderer - Rendering views for Catalyst action
 
     BEGIN { extends 'Catalyst::Controller'; }
 
-    sub lookup :GET Args(1) :Does(Renderer) :View(TT) {
+    sub lookup :Local :Does(Renderer) :View(TT) {
         my ( $self, $c ) = @_;
+        $c->stash->{template} = 'helloworld.tt';
     }
 
 # DESCRIPTION
 
-Catalyst::ActionRole::Renderer is rendering views for Catalyst action
+Catalyst::ActionRole::Renderer is rendering views for Catalyst action.
+
+capable of declaratively rendering views.
+
+- No `$c.forward` 
+- No `sub end : ActionClass('RenderView') {}` 
 
 # SEE ALSO
 
+- [Catalyst::Controller](https://metacpan.org/pod/Catalyst::Controller)
 - [Catalyst::View](https://metacpan.org/pod/Catalyst::View)
-- [Catalyst::ActionRole](https://metacpan.org/pod/Catalyst::ActionRole)
 
 # AUTHOR
 

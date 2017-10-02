@@ -7,7 +7,7 @@ use Catalyst::Test 'TestApp';
 use HTTP::Request::Common;
 use_ok('Catalyst::Test', 'TestApp');
 
-
+# render TT
 {
     ok my $res = request GET '/render_tt';
     is $res->code, 200;

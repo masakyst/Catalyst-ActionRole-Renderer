@@ -1,6 +1,8 @@
 Revision history for Catalyst-ActionRole-Renderer
 
 {{$NEXT}}
+    - Add documents
+    - Add tests
 
 0.01  2017-09-29 21:15:57 JST
-        - Initial release
+    - Initial release

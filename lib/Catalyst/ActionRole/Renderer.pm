@@ -4,7 +4,7 @@ use strict;
 use Moose::Role;
 use namespace::autoclean;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 
 around execute => sub {

@@ -1,13 +1,19 @@
-use strict;
+
+use FindBin qw($Bin);
+use lib "$Bin/lib";
+
 use Test::More;
-
-use FindBin;
-use lib "$FindBin::Bin/lib";
-
 use Catalyst::Test 'TestApp';
 use HTTP::Request::Common;
+use_ok('Catalyst::Test', 'TestApp');
 
-ok( my $res = request('https://localhost/root_ssl'), 'request ok' );
-is( $res->code, 200, 'SSL request to SSL' );
+
+{
+    ok my $res = request GET '/render_tt';
+    is $res->code, 200;
+    is $res->content, "helloworld\n";
+    is $res->content_type, 'text/html';
+}
+
 
 done_testing;

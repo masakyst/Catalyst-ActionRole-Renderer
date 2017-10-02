@@ -1,14 +1,18 @@
 package TestApp::Controller::Root;
 
-use strict;
-use warnings;
-use parent qw/Catalyst::Controller::ActionRole/;
+use Moose;
+#use Catalyst::View::TT;
+
+BEGIN { extends 'Catalyst::Controller' };
 
 __PACKAGE__->config->{namespace} = '';
 
-sub root_ssl :Local Does("Renderer") :View(TT) {
+sub render_tt :Local :Does("Renderer") :View(TT) {
+#sub render_tt :Local {
   my ( $self, $c ) = @_;
   $c->stash->{template} = 'hello.tt';
+  #$c->forward('View::TT');
+  #$c->response->body('Unsecured')
 }
 
 #sub root_plain :Local Does("NoSSL") {
@@ -76,5 +80,13 @@ sub root_ssl :Local Does("Renderer") :View(TT) {
 #it under the same terms as Perl itself.
 #
 #=cut
+
+#sub end : Private {
+#    my ($self, $c) = @_; 
+#
+#    my $view = 'View::TT';
+#    $c->forward($view);
+#}
+
 
 1;

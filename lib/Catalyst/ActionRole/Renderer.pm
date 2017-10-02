@@ -16,6 +16,7 @@ around execute => sub {
     unless ($view) {
         $view = $c->config->{default_view};
     }
+    
     my $renderer = sprintf "View::%s", $view;
     $c->log->debug($renderer);
 
